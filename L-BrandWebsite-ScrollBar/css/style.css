@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+}
+.wrap{
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    width: 600px;
+    height: 400px;
+    background: rgba(60,31,13,0.7);
+}
+.content{
+    width: 550px;
+    height: 360px;
+    margin: 20px 30px 20px 20px;
+    overflow-y: scroll;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.content h5{
+    color: #bc7134;
+    font-family: "Microsoft YaHei";
+}
+.content p{
+    color: #b77777;
+    font-size: 10px;
+    font-family: "Microsoft YaHei";
+}
+.content img{
+    margin:10px 20px;
+}
+/*.scroll{
+    position: absolute;
+    width: 16px;
+    height: 320px;
+    background: url(../images/scroll_bar.png);
+    top: 40px;
+    right: 20px;
+}*/
+/*.btn{
+    position: absolute;
+    top: 0;
+    right: -5px;
+}*/
+
+
+/*60 31 13 */
+
+
+::-webkit-scrollbar{
+    width:26px;
+    background: url("../images/scroll_bar1.png") no-repeat center;
+}
+::-webkit-scrollbar-button{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    width:26px;
+    background: url("../images/scroll.png") no-repeat center;
+}
