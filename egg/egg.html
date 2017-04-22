@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        body{
+        cursor:url(img-6.cur),url(img-6.png),auto;
+        background-image:url(bg.jpg);
+        }
+        #span1{
+            display: inline-block;
+            border: 1px solid red;
+            width: 100px;
+            height: 20px;
+
+        }
+        #span2{
+            display: inline-block;
+            width: 5px ;
+            background:red;
+            height: 20px ;
+        }
+    </style>
+    <script>
+        var dsq;
+        var sj;
+        var count=0;
+        var n=0;
+        function startgame(){
+            window.clearInterval("dsq");
+            sj=window.setInterval("jishi()",1000);
+          dsq= window.setInterval("star()",1000);
+        }
+     /*   img-6.png*/
+        var obj;
+        function star(){
+            obj=document.createElement("img");
+            obj.src="egg_1.png";
+            count++;
+            var obj2=document.getElementById("span2");
+            obj2.style.width=count*5+"px";
+            if(count>=20){
+                alert("GAME OVER!");
+                window.clearInterval(dsq);
+                location.reload();
+
+            }
+            obj.onclick=remove;
+            var w=Math.random()*70+20;
+            obj.width=w;//随机大小
+            var x=Math.random()*1270;
+            var y=Math.random()*500+150;
+            obj.style.position="absolute";
+            obj.style.top=y+"px";
+            obj.style.left=x+"px";//随机位置
+            document.body.appendChild(obj);
+
+        }
+       function remove(){
+          this.parentNode.removeChild(this);//删除某个节点
+           count--;
+           var obj2=document.getElementById("span2");
+           obj2.style.width=count*5+"px";
+       }
+        function stopgame(){
+            alert("STOP");
+        }
+        function jishi(){
+
+            n++;
+            var jishi=document.getElementById("div1");
+            jishi.innerHTML="游戏进行了"+n+"秒";
+        }
+    </script>
+</head>
+<body>
+<button id="1" onclick="startgame()">START</button>
+<button id="2" onclick="stopgame()">STOP</button>
+<div id="div1">游戏进行了0秒</div>
+<span id="span1"><span id="span2"></span></span>
+<audio src="bg-music.mp3" autoplay="autoplay"></audio>
+
+</body>
+</html>
