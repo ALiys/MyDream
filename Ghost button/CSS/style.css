@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #333333;
+}
+.content{
+    width: 970px;
+    height: 600px;
+    margin: 50px auto;
+}
+@media screen and (max-width: 320px){
+    .mission,.play,.touch{
+        width: 250px;
+        height: 300px;
+    }
+
+}
+.mission,.play,.touch{
+    width: 250px;
+    height: 300px;
+    margin-left: 55px;
+    margin-top: 60px;
+    float: left;
+}
+
+.icon{
+    width: 180px;
+    height: 150px;
+    margin: 20px auto;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.icon:hover{
+    -webkit-transform:scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
+}
+.mission .icon{
+    background: url(../images/mission.png)no-repeat;
+}
+.play .icon{
+    background: url(../images/play.png)no-repeat;
+}
+.touch .icon{
+    background: url(../images/touch.png)no-repeat;
+}
+.button {
+    display: block;
+    width: 160px;
+    height: 45px;
+    border: 2px solid rgba(255,255,255,0.8);
+    padding-left: 20px;
+    margin:0 auto ;
+}
+.button a{
+    color: #2ecc71;
+    line-height: 45px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.button{
+    display: block;
+    background: url(../images/allow.png) no-repeat 120px;
+    /*background-position 省略y值，则垂直方向上默认为50%，也可写成center*/
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+}
+.button:hover{
+  background-position: 130px;
+}
+.line_bottom{
+    width: 0px;
+    height: 2px;
+    background: purple;
+    position: absolute;
+    bottom: -2px;
+    left: 350px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.line_left{
+    width: 2px;
+    height: 0px;
+    background: red;
+    position: absolute;
+    left: -2px;
+    top: 150px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.line_top{
+    width: 0px;
+    height: 2px;
+    background: #008000;
+    position: absolute;
+    top: -2px;
+    left: -150px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.line_right{
+    width: 2px;
+    height: 0px;
+    background: orange;
+    position: absolute;
+    right: -2px;
+    top: -150px;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.button:hover .line_top{
+    width: 184px;
+    height: 2px;
+    background: #0000ff;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+.button:hover .line_bottom{
+    width: 184px;
+    height: 2px;
+    background: #a52a2a;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+}
+.button:hover .line_left{
+    width: 2px;
+    height: 47px;
+    background:mediumvioletred;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+}
+.button:hover .line_right{
+    width: 2px;
+    height: 47px;
+    background: #fff;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+}
